@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>First Windows Phone App</title>
+
+  <link href="/css/ui-themed.css" rel="stylesheet">
+  <script src="//Microsoft.Phone.WinJS.2.1/js/base.js"></script>
+  <script src="//Microsoft.Phone.WinJS.2.1/js/ui.js"></script>
+
+  <link href="/css/default.css" rel="stylesheet">
+  <script src="/js/default.js"></script>
+</head>
+<body class="phone">
+  <h1>相片:</h1>
+  <p>
+    <canvas id="canvas" width="400" height="300"></canvas>
+  </p>
+  <p>
+    <input type="text" id="Text" placeholder="印在相片上的文字">
+  </p>
+
+  <!-- 畫面下方的選單 -->
+  <div id="appBar" data-win-control="WinJS.UI.AppBar">
+    <!-- 選擇照片的選單按鈕 -->
+    <button data-win-control="WinJS.UI.AppBarCommand"
+            data-win-options="{
+              id: 'cmdTakePhoto',
+              label: '選擇照片',
+              icon: 'camera',
+              section: 'global',
+              tooltip: '選擇或拍一張照片'
+            }"></button>
+  </div>
+</body>
+</html>
